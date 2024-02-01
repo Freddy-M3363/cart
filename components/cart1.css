@@ -1,0 +1,109 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+a{
+    text-decoration: none;
+
+}
+
+.cart-body{
+    width: 80%;
+    margin:10%;
+    margin-top: 5px;
+}
+
+.header{
+    display: flex;
+    flex: auto;
+    justify-content: space-evenly;
+    background-color:  #ff9900;
+    height: auto;
+    width: 100%;
+}
+
+.search{
+    display: flex;
+    flex:auto;
+    margin-top: 10px;
+    justify-content: space-around; 
+}
+
+.landing-container {
+    margin-top: 10px;
+    height: 100dvh;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex: content;
+    justify-content: space-around;
+    background-color:red;
+
+}
+
+.margin{
+    margin-top: 10px;
+    
+}
+
+details {
+    position: relative;
+    z-index: 1;
+}
+
+.menu{
+    list-style-type: none;
+}
+
+.menu li{
+
+    font-size:20px ;
+    display: block;
+    margin-top: 10px;
+}
+
+.nav{
+    margin-top: 30px;
+    height: max-content;
+    background-color:#fff;
+    border-radius: 5px;
+}
+
+.product-interface{
+    margin-top: 30px;
+}
+
+.end{
+    margin-top: 30px;
+    background-color:#fff; 
+}
+
+.call{
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 900;
+    text-align: center;
+    height: inherit;
+    background-color: #ff751a;
+}
+
+.cart img{
+    height: 20px;
+    width: 20px; 
+}
+
+.displ{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 30px;
+    
+    border-radius:10px;
+
+
+}
+
+.displ .img{
+    
+    object-fit: cover;
+}
