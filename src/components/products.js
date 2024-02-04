@@ -1,28 +1,27 @@
-import React from 'react';
-import './products.css';
+import React, {useState} from 'react';
+import './styles/products.css';
 
-const Product = (props)=> {
-    const {src, alt, description, price, previous} = props;
- 
-    return(
-        <div className='product-detail'>
-            <div className='product-container'>
-                <div>
-                 <div className='image'>
-                    <img src={src} alt={alt} />
-                    
-             </div>
-             <div className='description'>
-                 <h2>{description}</h2>
-                 <h3>Price: {price}</h3>
-                 <h3> Previous Price:<strike> npm s{previous}</strike></h3>
-             </div>
-             </div>
-            </div> 
+const ImageCard = ({ src, description, price, alt, previous }) => {
+   const[count, setCount]= useState(0); 
+   const ADD = (e) =>{
+    setCount(count++)
+   }
+    
+  return (
+    <div className="image-card">
+        <div className="image">
+             <img src={src} alt={alt} />   
+        <div className='details'>
+             <h3>{description}</h3>
+             <p>Price: {price}</p>
+             <p>previous: <s>{previous}</s></p>
+             <button onClick={ADD}>ADD TO CART</button>
 
-
+      </div>
+    </div>
         </div>
-    );
-}
+        
+  );
+};
 
-export default Product;
+export default ImageCard;

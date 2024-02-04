@@ -1,0 +1,47 @@
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.image-card{
+  flex:content;
+  margin-bottom: 20px;
+  width: 300px;
+  height: auto;
+  border: #000 solid 1px;
+  border-radius:5x;
+  margin: 10px 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+img{
+  width: 100%;
+  height: auto;
+  justify-content: center;
+}
+
+.product{
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: auto;
+}
+
+.details{
+  margin-left: 5px;
+}
+
+.details p{
+  font-size: 18px;
+  font-weight: 600;
+}
+
+button{
+  background-color:aqua;  
+  border-radius: 5px;
+  border: 1px solid blue;
+}
+
+

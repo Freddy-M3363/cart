@@ -1,26 +1,18 @@
 
-import React from 'react';
-import ImageCard from './components/products'; 
-import Interfaces from './components/cart1';
-
-
-const App = () => {
-  const imagesData = [
+const Product_list = [
     { 
     id:'1',
     src:"https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/72/495776/1.jpg?3633", 
     description:"tissue double layer roll", 
     alt:"phone illusion isn't available ", 
-    price:"Ksh 300", 
-    previous:" ksh 320"
+    price:"Ksh 300", previous:" ksh 320"
   },
     { 
     id:'2',
     src:'https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/72/6737701/1.jpg?2184',
     description:"tecno spark 8",
     alt:"phone illusion isn't available ",
-    price:"Ksh 10 900", 
-    previous:" ksh 11 320"
+    price:"Ksh 10 900", previous:" ksh 11 320"
       },
     { 
     id:'3',
@@ -127,27 +119,5 @@ const App = () => {
     previous:" ksh 320"
   }
   
-  
   ];
-
-  return (
-    <div>
-        <Interfaces/>
-        <div className="product-compo">
-      {imagesData.map((image, index) => (
-        
-        <ImageCard
-          key={index}
-          src={image.src}
-          description={image.description}
-          price={image.price}
-          previous={image.previous}
-        />
-        
-      ))}
-      </div>
-    </div>
-  );
-};
-
-export default App;
+  export default Product_list;

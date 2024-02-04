@@ -1,13 +1,19 @@
 import React from "react";
-import "./cart1.css";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import "./styles/cart1.css";
 import cart from "./images/cart.png";
-import grocery from "./images/grocery.jpg";
 import phone from "./images/phone.gif";
-import phone2 from "./images/phone2.jpg";
-
-
+import Signin from "./signin";
+import ADD from "./products";
 
 function Interfaces() {
+     const history = useHistory();
+
+    const signin = ()=> {
+      history.push('/Signin');
+    }
+
+
     return (
         <div className="cart-body" >
         <div >
@@ -27,7 +33,11 @@ function Interfaces() {
           </form>
           <details>
             <summary>accounts</summary>
-            <button >signin</button>
+
+          <Route>
+          <button onClick={Signin}>signin</button>
+          </Route>
+
             <hr/>
             <p><a href="#myaccount"><i className="fa-thin fa-face-smile"></i>&nbsp;my account</a></p>
             <p><a href="#saved" target="_blank" rel="noopener noreferrer">saved items</a></p>
@@ -35,7 +45,7 @@ function Interfaces() {
           </details>
 
           <p><a href="#help">Help</a></p>
-          <p className="cart"><img src={cart} alt="null"/> cart</p>
+          <p className="cart"><img src={cart} alt="null"/> {ADD}</p>
   
         </section>
         
@@ -56,9 +66,7 @@ function Interfaces() {
            </section>
            <section className="product-interface">
                 <div className="displ"> 
-                    <img className="img" src={phone2} alt=" " />
                     <img className="img" src={phone} alt=" "/>
-                    <img className="img" src={grocery} alt=" "/>
                 </div>
            </section>
            <section >
@@ -90,9 +98,6 @@ function Interfaces() {
           
           </div>
 
-          <section className="products" >
-
-          </section>
           
         </div>
     )
