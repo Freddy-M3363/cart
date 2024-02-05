@@ -2,7 +2,7 @@
 import React from 'react';
 import ImageCard from './components/products'; 
 import Interfaces from './components/cart1';
-
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 const App = () => {
   const imagesData = [
@@ -132,7 +132,7 @@ const App = () => {
 
   return (
     <div>
-        <Interfaces/>
+      <Interfaces />
         <div className="product-compo">
       {imagesData.map((image, index) => (
         

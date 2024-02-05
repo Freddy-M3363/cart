@@ -1,21 +1,15 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import "./styles/cart1.css";
 import cart from "./images/cart.png";
 import phone from "./images/phone.gif";
 import Signin from "./signin";
 import ADD from "./products";
+import {useNavigate} from 'react-router-dom';
 
 function Interfaces() {
-     const history = useHistory();
-
-    const signin = ()=> {
-      history.push('/Signin');
-    }
-
 
     return (
-        <div className="cart-body" >
+        <div className="cart-body" id="signin" >
         <div >
         <div className="header">
           <a href="http://cfreddy.com"><i class="fa-solid fa-dove"></i> sell to freddy</a>
@@ -34,9 +28,8 @@ function Interfaces() {
           <details>
             <summary>accounts</summary>
 
-          <Route>
-          <button onClick={Signin}>signin</button>
-          </Route>
+          <button ><a href="#signin">signin</a></button>
+      
 
             <hr/>
             <p><a href="#myaccount"><i className="fa-thin fa-face-smile"></i>&nbsp;my account</a></p>
