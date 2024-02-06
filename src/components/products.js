@@ -2,10 +2,14 @@ import React, {useState} from 'react';
 import './styles/products.css';
 
 const ImageCard = ({ src, description, price, alt, previous }) => {
-   const[count, setCount]= useState(0); 
-   const ADD = (e) =>{
-    setCount(count++)
+   const[badge, setBadge]= useState(badge); 
+   const Add = () =>{
+       let count= document.getElementById('badge').value;
+       count= setBadge(badge=>badge+1)
+       return document.getElementById('badge').value = count; 
+
    }
+   
     
   return (
     <div className="image-card">
@@ -15,7 +19,7 @@ const ImageCard = ({ src, description, price, alt, previous }) => {
              <h3>{description}</h3>
              <p>Price: {price}</p>
              <p>previous: <s>{previous}</s></p>
-             <button onClick={ADD}>ADD TO CART</button>
+             <button onClick={Add}>ADD TO CART</button>
 
       </div>
     </div>
@@ -23,5 +27,4 @@ const ImageCard = ({ src, description, price, alt, previous }) => {
         
   );
 };
-
 export default ImageCard;

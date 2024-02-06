@@ -8,13 +8,13 @@ const Signin = ({ onSignin }) => {
 
   const signIn = () => {
 
-    const fakeUsers = [
+    const Users = [
       { username: 'frank', password: '27667663' },
       { username: 'kim', password: '783257' },
     ];
 
     
-    const user = fakeUsers.find((user) => user.username === username && user.password === password);
+    const user = Users.find((user) => user.username === username && user.password === password);
 
     if (user) {
      
@@ -42,7 +42,7 @@ const Signin = ({ onSignin }) => {
       />
       <button onClick={signIn}>Signin</button>
       {error && <p style={{ color: 'red' }}>{error}</p>}
-      <p>Don't have account?<a href=''>Sign</a></p>
+      <p>Don't have account?<a href='./signup'>Sign</a></p>
     </div>
 
     

@@ -10,7 +10,7 @@ a{
 .cart-body{
     width: 80%;
     margin:10%;
-    margin-top: 5px;
+    margin-top: 0px;
 }
 
 .header{
@@ -26,20 +26,71 @@ a{
     display: flex;
     flex:auto;
     margin-top: 10px;
-    justify-content: space-around; 
+    justify-content: space-around;
+}
+
+.search-box{
+    border: #272424 solid 1px;
+    border-radius: 3px;
+    outline: none;
+    font-weight: 400;
+}
+
+.searchbar{
+    background-color:rgb(240, 231, 231);
+    color:#000;
+    padding: 2px;
+    font-weight: 600;
+}
+
+.such{
+    background-color: #03f70f;
+    color:#070000;
+    border: 0;
+    padding: 2px;
+    outline: none;
 }
 
 .landing-container {
     margin-top: 10px;
-    height: 100dvh;
+    height: 90dvh;
     width: 100%;
     background-color: #fff;
     display: flex;
     flex: content;
     justify-content: space-around;
-    background-color:red;
+    background-color:rgb(255, 72, 0);
+    border-radius:10px 5px;
 
 }
+
+details{
+    cursor: grab;
+}
+
+details button{
+    margin: 3px;
+    background-color: #000;
+    cursor: pointer;
+    padding: 1px;
+    border: 0.5px solid white;
+    outline: none;
+
+}
+
+
+details[open] summary {
+    position: relative;
+    z-index: 1;
+  }
+
+  details[open] div {
+    position: absolute;    
+    background-color:#1ae213;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    border-radius:2px;
+    z-index: 2;
+  }
 
 .margin{
     margin-top: 10px;
@@ -63,9 +114,11 @@ details {
 }
 
 .nav{
-    margin-top: 30px;
+    position: inherit;
+    display: inline-flex;
+    margin: 30px;
     height: max-content;
-    background-color:#fff;
+    background-color:rgb(156, 241, 241);
     border-radius: 5px;
 }
 
@@ -76,24 +129,51 @@ details {
 .end{
     margin-top: 30px;
     background-color:#fff; 
+    padding: 5px;
+    color: darkblue;
+    text-transform: capitalize;
+    text-wrap: wrap;
+    margin: 30px;
+    box-shadow: 2px 4px 3px rgba(250, 255, 240, 0.9);
+    border-radius:2px;
+
+
 }
 
-.call{
+.landing-container section .call{
+    position: inherit;
+    margin: 80px 40px 30px  40px;
+    margin-bottom: 0px;
     font-size: 20px;
     padding: 10px;
     font-weight: 900;
     text-align: center;
     height: inherit;
     background-color: #ff751a;
+    border-radius :3px 30px;
 }
 
 .cart{
+    position : relative;
     display: inline-block;
 }
 
 .cart img{
-    height: 20px;
-    width: 20px; 
+    height: 35px;
+    width: 35px; 
+    background-color:transparent;
+    border-radius: 50%;
+}
+
+.badge {
+      position: absolute;
+      left: 14px;
+      bottom: 14px;
+      background-color: red;
+      color: white;
+      border-radius: 50%;
+      padding: 4px 8px;
+      font-size: 10px;
 }
 
 .displ{
@@ -110,4 +190,6 @@ details {
 .displ .img{
     
     object-fit: cover;
+    height: 70dvh;
+    width: auto !important;
 }

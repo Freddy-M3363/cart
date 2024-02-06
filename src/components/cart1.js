@@ -1,12 +1,17 @@
 import React from "react";
 import "./styles/cart1.css";
-import cart from "./images/cart.png";
+import cart11 from "./images/cart11.png";
 import phone from "./images/phone.gif";
-import Signin from "./signin";
-import ADD from "./products";
-import {useNavigate} from 'react-router-dom';
+import Data from "../Data";
+import badge from "./products";
+import { Button } from "react-bootstrap";
+import {Link} from "react-router-dom";
 
 function Interfaces() {
+
+  const yourItems = () => {
+
+  }
 
     return (
         <div className="cart-body" id="signin" >
@@ -21,25 +26,27 @@ function Interfaces() {
         <section className="search">
           <p class="name">freddy <i class="fa-solid fa-dove"></i>
           </p>
-          <form action="">
-            <input type="text" placeholder="Search products brand and category" className="searchbar" />
-            <button type="submit" className="gx lx tw yr yz zc abw cay cbe cbm cco">search<i class="fa-solid fa-magnifying-glass"></i></button>
+          <form action="" className="search-box">
+            <input type="text" placeholder="Search products category" className="searchbar" />&nbsp; &nbsp;
+            <Button type="submit" className="such">search</Button>
           </form>
           <details>
             <summary>accounts</summary>
 
-          <button ><a href="#signin">signin</a></button>
-      
-
-            <hr/>
-            <p><a href="#myaccount"><i className="fa-thin fa-face-smile"></i>&nbsp;my account</a></p>
-            <p><a href="#saved" target="_blank" rel="noopener noreferrer">saved items</a></p>
-            <p><a href="#order"> orders</a></p>
+            <div>
+             <Link to="/signin">signIn</Link>
+                    
+              <hr/>
+              <p><a href="#myaccount"><i className="fa-thin fa-face-smile"></i>account</a></p>
+              <p><a href="#saved" target="_blank" rel="noopener noreferrer">saved</a></p>
+              <p><a href="#order"> orders</a></p>
+           </div>  
           </details>
 
           <p><a href="#help">Help</a></p>
-          <p className="cart"><img src={cart} alt="null"/> {ADD}</p>
-  
+          <div className="cart">
+            <a href="#Add"><img src={cart11} onDoubleClick={yourItems} alt="null"/> <span id="badge" className="badge">{badge}</span></a>
+          </div>
         </section>
         
         <div className="landing-container">
@@ -53,8 +60,6 @@ function Interfaces() {
                     <li><a href="#contact">home and office</a></li>
                     <li><a href="#home">fashion</a></li>
                     <li><a href="#about">computing</a></li>
-                    <li><a href="#products">supermarket</a></li>
-                    <li><a href="#contact">baby products</a></li>
                 </ul>
            </section>
            <section className="product-interface">
@@ -65,18 +70,18 @@ function Interfaces() {
            <section >
                
               <div className="end">
-              <div>
-                <p className="text-4xl" >Help center</p>
-                <p>Guide to customer</p>
-              </div>
-              <div>
-              <p className="text-4xl" >easy return </p>
-              <p>Quick Refund</p>
-              </div>
-              <div>
-              <p className="text-4xl" >sell on freddycom</p>
-              <p>million of visitors</p>
-              </div>
+                <div>
+                  <p className="text-3xl" >Help center</p>
+                  <p><a href="#guide" >Guide to customer</a></p>
+                </div>
+                <div>
+                  <p className="text-3xl" >easy return </p>
+                  <p><a href="#refund">Quick Refund</a></p>
+                </div>
+                <div>
+                  <p className="text-3xl" >sell to freddycom</p>
+                  <p>million of visitors</p>
+                </div>
               </div>
               <div class className="call" >
                  <p> call or whatsapp</p>
@@ -90,6 +95,7 @@ function Interfaces() {
           </div>
           
           </div>
+          <Data/>
 
           
         </div>
