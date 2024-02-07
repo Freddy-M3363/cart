@@ -7,11 +7,7 @@ import badge from "./products";
 import { Button } from "react-bootstrap";
 import {Link} from "react-router-dom";
 
-function Interfaces() {
-
-  const yourItems = () => {
-
-  }
+const Interfaces = ({product,AddToCart})=> {
 
     return (
         <div className="cart-body" id="signin" >
@@ -45,7 +41,7 @@ function Interfaces() {
 
           <p><a href="#help">Help</a></p>
           <div className="cart">
-            <a href="#Add"><img src={cart11} onDoubleClick={yourItems} alt="null"/> <span id="badge" className="badge">{badge}</span></a>
+            <a href="#Add"><img src={cart11} onClick={()=>AddToCart(product)} alt="null"/> <span id="badge" className="badge">{badge}</span></a>
           </div>
         </section>
         

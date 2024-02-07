@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Signin = ({ onSignin }) => {
   const [username, setUsername] = useState('');
@@ -42,7 +43,7 @@ const Signin = ({ onSignin }) => {
       />
       <button onClick={signIn}>Signin</button>
       {error && <p style={{ color: 'red' }}>{error}</p>}
-      <p>Don't have account?<a href='./signup'>Sign</a></p>
+      <p>Don't have account?<Link to='/signup'>sign up</Link></p>
     </div>
 
     
